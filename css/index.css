@@ -157,6 +157,7 @@ h4,
 h5,
 h6 {
   padding: 1% 0;
+  border: 1px solid red;
 }
 h1 {
   font-family: 'Playfair Display', serif;
@@ -171,28 +172,58 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
 }
-p {
+p,
+ul,
+li {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
-  padding: 2% 0;
+  padding: 1% 0;
+  border: 1px solid red;
 }
 span {
   font-style: italic;
 }
 body {
   display: flex;
+  border: 1px solid red;
+}
+body section {
+  padding: 2%;
 }
 body .left-side {
   display: flex;
   flex-direction: column;
-  width: 25%;
   padding: 2%;
+  width: 25%;
   background-color: #4d4244;
   color: white;
 }
 body .right-side {
   display: flex;
   flex-direction: column;
-  width: 60%;
   padding: 2%;
+  width: 40%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 8%;
+  padding: 0 0.5%;
+}
+header nav {
+  height: 32vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  border: 1px solid red;
+}
+header .links {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 100%;
+  height: 32vh;
+  justify-content: space-between;
+  align-items: flex-end;
 }
