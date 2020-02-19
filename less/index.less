@@ -50,10 +50,69 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width:100%;
+	font-size: 62.5%
 }
 
 html, body {
     height: 100%;
 }
 
+//THIS IS MY CODE! LET'S GET TO WORK
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap'); //h1 font
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'); //nav, p and h3 font
+
+//variables
+@main-heading: 'Playfair Display', serif;
+@body-font: 'Source Sans Pro', sans-serif;
+@left-color: #4d4244;
+//Mix-ins
+
+h1, h2, h3, h4, h5, h6{
+	padding: 1% 0;
+}
+h1{
+	font-family: @main-heading;
+	font-size: 3rem;
+}
+h2{
+	font-size: 1.8rem;
+	font-family: @main-heading;
+}
+h3{
+	font-size:1.2rem;
+	font-family: @body-font;
+	text-transform: uppercase;
+}
+p{
+	font-family: @body-font;
+	font-size: 1rem;
+	padding: 2% 0;
+}
+span{
+	font-style: italic;
+}
+body{
+	display: flex;
+
+	.left-side{
+		display:flex;
+		flex-direction: column;
+		width: 25%;
+		padding:2%;
+		background-color: @left-color;
+		color: white;
+	}//end of left side
+	.right-side{
+		display:flex;
+		flex-direction: column;
+		width:60%;
+		padding:2%;
+	}//end of right side
+}//end of body
+
+
+header{
+
+}//end of header

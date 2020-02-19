@@ -129,8 +129,70 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
+  font-size: 62.5%;
 }
 html,
 body {
   height: 100%;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v20/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsunDXbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 1% 0;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+}
+h3 {
+  font-size: 1.2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+}
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  padding: 2% 0;
+}
+span {
+  font-style: italic;
+}
+body {
+  display: flex;
+}
+body .left-side {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 2%;
+  background-color: #4d4244;
+  color: white;
+}
+body .right-side {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2%;
 }
