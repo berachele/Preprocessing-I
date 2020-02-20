@@ -63,7 +63,7 @@ html, body {
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap'); //h1 font
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'); //nav, p and h3 font
 
-//variables
+//Variables
 @main-heading: 'Playfair Display', serif;
 @body-font: 'Source Sans Pro', sans-serif;
 @left-color: #4d4244;
@@ -74,17 +74,16 @@ html, body {
 	padding:2%;
 }
 
-
 h1, h2, h3, h4, h5, h6{
 	padding: 1% 0;
 	border: 1px solid red;
 }
 h1{
 	font-family: @main-heading;
-	font-size: 3rem;
+	font-size: 2.5rem;
 }
 h2{
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	font-family: @main-heading;
 }
 h3{
@@ -101,40 +100,25 @@ p, ul, li{
 span{
 	font-style: italic;
 }
+
 body{
-	display: flex;
 	border: 1px solid red;
+	margin: 2% 5%;
 
 	section{
 		padding: 2%;
 	}//end of section
+	.full-page{
+		display: flex;
+	}
 	.left-side{
 		.flex();
-		width: 25%;
+		width: 39%;
 		background-color: @left-color;
 		color: white;
 	}//end of left side
 	.right-side{
 		.flex();
-		width:40%;
+		width:60%;
 	}//end of right side
 }//end of body
-
-header{
-	.flex();
-	width: 8%;
-	padding: 0 .5%;
-
-	nav{
-		height:32vh;
-		.flex();
-		border:1px solid red;
-	}
-	.links{
-		.flex();
-		width:100%;
-		height:32vh;
-		justify-content: space-between;
-		align-items: flex-end;
-	}//end of div.links
-}//end of header
