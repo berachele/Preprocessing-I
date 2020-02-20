@@ -150,45 +150,68 @@ body {
   font-display: swap;
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 1% 0;
-  border: 1px solid red;
-}
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
+  padding-bottom: 3%;
 }
 h2 {
   font-size: 1.5rem;
   font-family: 'Playfair Display', serif;
+  padding-bottom: 3%;
 }
 h3 {
   font-size: 1.2rem;
   font-family: 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
+  padding-bottom: 3%;
 }
 p,
 ul,
 li {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
-  padding: 1% 0;
-  border: 1px solid red;
+  padding: 0;
+  margin: 2%;
 }
 span {
   font-style: italic;
 }
 body {
-  border: 1px solid red;
-  margin: 2% 5%;
+  margin: 2%;
+}
+body header {
+  height: 8vh;
+  background-color: #E0FFFF;
+  overflow: auto;
+  white-space: nowrap;
+  border-radius: 2%;
+}
+body header nav {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+}
+body header nav div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+body header nav div a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
+  color: #4d4244;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5%;
+  border: 4px dotted mistyrose;
+  border-radius: 12%;
 }
 body section {
-  padding: 2%;
+  padding: 4%;
+  line-height: normal;
 }
 body .full-page {
   display: flex;
@@ -205,5 +228,10 @@ body .right-side {
   display: flex;
   flex-direction: column;
   padding: 2%;
-  width: 60%;
+  padding-right: 0;
+  width: 61%;
+  background-color: mistyrose;
+}
+footer {
+  padding-bottom: 2%;
 }

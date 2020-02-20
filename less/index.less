@@ -67,46 +67,90 @@ html, body {
 @main-heading: 'Playfair Display', serif;
 @body-font: 'Source Sans Pro', sans-serif;
 @left-color: #4d4244;
+@right-color:mistyrose;
+@accent-color: #E0FFFF;
 //Mix-ins
 .flex(){
 	display:flex;
 	flex-direction: column;
 	padding:2%;
 }
-
-h1, h2, h3, h4, h5, h6{
-	padding: 1% 0;
-	border: 1px solid red;
+.header(){
+		height:8vh;
+		background-color: @accent-color;
+		overflow: auto;
+		white-space: nowrap;
 }
+.padding-bottom(){
+	padding-bottom:3%;
+}
+//end on fonts, variables, and mixins
 h1{
 	font-family: @main-heading;
 	font-size: 2.5rem;
-}
+	.padding-bottom();
+
+	@media(max-width:500px){
+		color:red;
+	}//end of media
+}//end of h1
 h2{
 	font-size: 1.5rem;
 	font-family: @main-heading;
+	.padding-bottom();
 }
 h3{
 	font-size:1.2rem;
 	font-family: @body-font;
 	text-transform: uppercase;
+	.padding-bottom();
 }
 p, ul, li{
 	font-family: @body-font;
 	font-size: 1rem;
-	padding: 1% 0;
-	border: 1px solid red;
+	padding:0;
+	margin: 2%;
 }
 span{
 	font-style: italic;
 }
 
 body{
-	border: 1px solid red;
-	margin: 2% 5%;
+	margin: 2%;
+	
+	header{
+		.header();//part of scrollmenu
+		border-radius: 2%;
 
+		nav{
+			text-align:center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 8vh;
+			
+	
+			div{
+				display: flex;
+				width:100%;
+				justify-content: space-around;
+						
+				a{
+					font-family: @body-font;
+					font-weight: bolder;
+					color: @left-color;
+					text-decoration: none;
+					font-size:1.5rem;
+					padding:.5%;
+					border: 4px dotted @right-color;
+					border-radius: 12%;
+				}//end of anchors
+			}//end of div (.links)
+		}//end of nav
+	}//header end
 	section{
-		padding: 2%;
+		padding: 4%;
+		line-height: normal;
 	}//end of section
 	.full-page{
 		display: flex;
@@ -116,9 +160,19 @@ body{
 		width: 39%;
 		background-color: @left-color;
 		color: white;
+
+		@media(max-width:500px){
+			width:40%;
+		}
+	}
 	}//end of left side
 	.right-side{
 		.flex();
-		width:60%;
+		padding-right:0;
+		width:61%;
+		background-color: @right-color;
 	}//end of right side
 }//end of body
+footer{
+	padding-bottom:2%;
+}//end of footer
